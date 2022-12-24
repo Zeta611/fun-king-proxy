@@ -126,7 +126,7 @@ int open_listenfd(char *port)
 
 void msg_posix_error(int code, char *msg) /* Posix-style error */
 {
-    fprintf(stderr, "%s: %s\n", msg, strerror(code));
+	fprintf(stderr, "%s: %s\n", msg, strerror(code));
 }
 
 void msg_unix_error(char *msg)
@@ -136,7 +136,7 @@ void msg_unix_error(char *msg)
 
 void msg_gai_error(int code, char *msg)
 {
-    fprintf(stderr, "%s: %s\n", msg, gai_strerror(code));
+	fprintf(stderr, "%s: %s\n", msg, gai_strerror(code));
 }
 
 void unix_error(char *msg) /* Unix-style error */
@@ -147,8 +147,8 @@ void unix_error(char *msg) /* Unix-style error */
 
 void posix_error(int code, char *msg) /* Posix-style error */
 {
-    fprintf(stderr, "%s: %s\n", msg, strerror(code));
-    exit(0);
+	fprintf(stderr, "%s: %s\n", msg, strerror(code));
+	exit(0);
 }
 
 int Open_clientfd(char *hostname, char *port)
